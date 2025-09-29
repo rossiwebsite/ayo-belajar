@@ -1,0 +1,98 @@
+.sub-header {
+  background: #2196f3;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  position: relative;
+}
+
+.sub-header .back-btn {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sub-header h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.intro {
+  padding: 20px;
+  text-align: center;
+}
+
+.intro p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.list-pertanyaan {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pertanyaan {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pertanyaan h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.btn-jawab {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.btn-jawab:hover {
+  background: #1976d2;
+}
+
+.jawaban {
+  display: none;
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.doa-belajar {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.doa-belajar h2 {
+  font-size: 18px;
+  color: #2196f3;
+  margin-bottom: 10px;
+}
+
+.doa-belajar p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
