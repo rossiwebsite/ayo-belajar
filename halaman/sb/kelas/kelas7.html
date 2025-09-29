@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Seni Rupa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="sub-header">
+    <a href="../index.html" class="back-btn">←</a>
+    <h1>Seni Rupa</h1>
+  </header>
+
+  <section class="intro">
+    <p>Berisi materi Seni Rupa kelas 7 untuk belajar.</p>
+  </section>
+
+  <div class="doa-belajar">
+    <h2>Kumpulan Doa Belajar</h2>
+    <button class="btn-jawab" onclick="toggleJawaban(this, 'Lihat Doa')">Lihat Doa</button>
+    <div class="jawaban">
+      <h3>Doa Sebelum Belajar</h3>
+      <p>اللّهُمَّ انْفَعْنَا بِمَا عَلَّمْتَنَا وَعَلِّمْنَا مَا يَنْفَعُنَا وَزِدْنَا عِلْمًا</p>
+      <p><i>Allahumma anfa‘na bima ‘allamtana wa ‘allimna ma yanfa‘una wa zidna ‘ilma.</i></p>
+      <p><b>Artinya:</b> Ya Allah, berikanlah manfaat kepada kami dari apa yang Engkau ajarkan, ajarkanlah kepada kami apa yang bermanfaat, dan tambahkanlah ilmu kepada kami.</p>
+
+      <h3>Doa Sesudah Belajar</h3>
+      <p>الْحَمْدُ لِلّهِ رَبِّ الْعَالَمِينَ</p>
+      <p><i>Alhamdulillahi rabbil ‘alamin.</i></p>
+      <p><b>Artinya:</b> Segala puji bagi Allah, Tuhan semesta alam.</p>
+
+      <h3>Doa Agar Ilmu Bermanfaat</h3>
+      <p>اللّهُمَّ اجْعَلْنِيْ عَالِمًا عَامِلًا وَارْزُقْنِيْ عِلْمًا نَافِعًا</p>
+      <p><i>Allahumma aj‘alni ‘aliman ‘amila, warzuqni ‘ilman nafi‘a.</i></p>
+      <p><b>Artinya:</b> Ya Allah, jadikanlah aku orang yang berilmu dan mengamalkannya, serta berilah aku rezeki ilmu yang bermanfaat.</p>
+    </div>
+  </div>
+  
+  <div class="search-box">
+  <input type="text" id="searchInput" placeholder="Cari soal di halaman ini..." oninput="searchQuestions()">
+  </div>
+
+  <section class="list-pertanyaan">
+    <div class="pertanyaan">
+      <h3>...</h3>
+      <button class="btn-jawab" onclick="toggleJawaban(this)">Lihat Jawaban</button>
+      <div class="jawaban">
+        <p>🕰️ <b>Zaman Kuno – Keyakinan Bumi Datar</b></p>
+        <p>
+          ...
+        </p>
+        <p>
+          ...
+        </p>
+        
+        <p>✨ <b>Kesimpulan</b></p>
+        <p>
+          ...
+        </p>
+        <p>
+          ...
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+  function toggleJawaban(btn, defaultText = "Lihat Jawaban") {
+    const jawaban = btn.nextElementSibling;
+    if (jawaban.style.display === "block") {
+      jawaban.style.display = "none";
+      btn.textContent = defaultText;
+    } else {
+      jawaban.style.display = "block";
+      btn.textContent = "Sembunyikan";
+    }
+  }
+
+  document.querySelectorAll(".jawaban").forEach(el => {
+    el.style.display = "none";
+  });
+
+  function searchQuestions() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let pertanyaan = document.querySelectorAll(".pertanyaan");
+
+    pertanyaan.forEach(p => {
+      let text = p.innerText.toLowerCase();
+      if (text.includes(input)) {
+        p.style.display = "block";
+      } else {
+        p.style.display = "none";
+      }
+    });
+  }
+  </script>
+</body>
+</html>
